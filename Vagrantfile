@@ -1,35 +1,22 @@
 ##############################################################################
 #
-# Deze Vagrantfile definieert een aantal boxen
-#
-# gitlab  -> voor de Gitlab Community Edition server
-# nexus   -> voor de Nexus repositoty manager
-# jenkins -> voor de Jenkins CI server
-# scrap   -> voor het proberen van dingen
-#
-# Vagrant plugins
-# ---------------
-# vagrant plugin install vagrant-hosts
+# This Vagrantfile creates a box for XLRelease (with provisioning)
 #
 # Box
 # ---
-# Virtualbox
+# Virtualbox - ubuntu/wily64
 # 
 ##############################################################################
 
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-MEMORY = ENV['TEST_VAGRANT_MEMORY'] || '2048'
+MEMORY = ENV['TEST_VAGRANT_MEMORY'] || '1024'
 CORES = ENV['TEST_VAGRANT_CORES'] || '1'
 
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-
-  config.vm.provision :hosts do |provisioner|
-    provisioner.add_host '192.168.9.15', ['xlrelease', 'xlrelease.localdomain']
-  end
 
   config.vm.define "xlrelease" do |node_config|
     node_config.vm.hostname = "xlrelease.localdomain"
