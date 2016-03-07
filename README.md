@@ -1,5 +1,6 @@
 XLRelease
 =========
+Quick start (local) version of XLRelease for testing purposes.
 
-Dockerfile and Vagrantfile.
-
+The Dockerfile was blantanly copied from https://github.com/adriaandejonge/docker-xlr.
+The Vagrantfile was inspired by the Dockerfile :)
