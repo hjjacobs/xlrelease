@@ -8,7 +8,7 @@
 #   and at the next start of the server the modified passwords will be re-encrypted.
 #
 #Wed Mar 02 11:44:53 CET 2016
-admin.password=geheim123
+admin.password=password
 jcr.repository.path=repository
 threads.min=3
 maintenance.forbidden_paths=deployit/task\:POST,deployit/tasks/v2\:POST,deployit/control\:POST
