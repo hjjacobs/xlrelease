@@ -13,6 +13,12 @@ Go to: http://192.168.9.15:5516/
 
 Docker
 ------
-`docker run -p 5516:5516 -p 55555:55555 xlr481`
+Build
 
-Go to: http://<docker-machine ip>:5516/
+ `docker build -t xlr481 .`
+
+Run
+
+ `docker run -p 5516:5516 -p 55555:55555 xlr481`
+
+Go to: http://[docker-machine ip]:5516/
